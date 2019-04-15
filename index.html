@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="row split">
+    <h3>Logo</h3>
+    <nav>
+      <button id="login">Login/Register</button>
+      <span id="user-email"></span>
+      <button id="logout">Log Out</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <form class="column">
+      <h3>Sign Up</h3>
+      <input id="name" type="text" placeholder="Full Name">
+      <input id="email" type="email" placeholder="Your Email Address">
+      <input id="password" type="password" placeholder="Type Your Password">
+      <input id="confirm" type="password" placeholder="Confirm Password">
+      <textarea id="info" cols="30" rows="10" placeholder="Something about yourself"></textarea>
+      <button id="submit">Submit</button>
+      <div id="toggle-btn" class="row toggle center align-center">
+        <p>Register</p>
+        <div class="toggle-switch">
+          <span></span>
+        </div>
+        <p>Login</p>
+      </div>
+    </form>
+
+  </main>
+
+
+  <!-- <script>
+    var firebase = {
+      database: function() {
+        // connect to the online cloud db for this specific account
+        return {
+          ref: function(folder_name) {
+            // Either create or update an existing folder/collection in the db
+          }
+        }
+      }
+      // ref: function() {
+      //   // connect/create a specific folder/collection in your db
+      // }
+    }  
+  </script> -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDwIdYNbS6bAnKGrTJXqkF39b59MyzKoKc",
+      authDomain: "test-aee68.firebaseapp.com",
+      databaseURL: "https://test-aee68.firebaseio.com",
+      projectId: "test-aee68",
+      storageBucket: "test-aee68.appspot.com",
+      messagingSenderId: "282902344574"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

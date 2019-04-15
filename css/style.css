@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+input, button {
+  outline: none;
+}                    
+
+
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+header {
+  padding: 7px 5%;
+  background: #555;
+  color: #fff;
+}
+
+header button#login {
+  padding: 4px 15px;
+  border: none;
+  border-radius: 3px;
+}
+
+main {
+  padding: 25px 5%;
+}
+
+form {
+  width: 450px;
+}
+
+form > * {
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+form .toggle p {
+  margin: 0 5px;
+}
+
+form .toggle-switch {
+  height: 25px;
+  background: #aaa;
+  border-radius: 30px;
+  width: 80px;
+  margin-top: 5px; 
+  position: relative;
+  cursor: pointer;
+}
+
+form .toggle span {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #555;
+  transition: left .4s;
+}
+
+form .toggle span.toggled {
+  left: 56px;
+}
