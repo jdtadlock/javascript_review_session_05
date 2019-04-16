@@ -70,9 +70,9 @@ function toggleRegisterState() {
 }
 
 function checkAuthState() {
-  firebase.auth().onAuthStateChanged(function (user) {
+  auth.onAuthStateChanged(function (user) {
     if (user) {
-      uid = firebase.auth().currentUser.uid;
+      uid = auth.currentUser.uid;
 
       showAuthView(true, user.email);
 
@@ -87,7 +87,7 @@ function checkAuthState() {
 
 
 function logUserOut() {
-  firebase.auth().signOut().then(function () {
+  auth.signOut().then(function () {
     showAuthView(false, null);
   }).catch(function (error) {
     // An error happened.
